@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>sugo14</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/sugo.webp" type="image/webp">
+    </head>
+    <body>
+        <div id="terminal-parent">
+            <div id="terminal">
+                <p style="white-space: pre;">
+┌─────┬──┬──┬─────┬─────┬───┬─┬─┐
+│   ──┤  │  │  ┌──┤  ╷  ├─┐ │ ╵ │
+├──   │     │  ╵  │  ╵  ├─┘ └─┐ │
+└─────┴─────┴─────┴─────┴─────┴─┘</p>
+                <p>
+                    <span class="machine">user@sugo14-dot-ca</span>:<span class="dir">/</span>$
+                    help
+                </p>
+                <p>Available commands: about, projects, contact</p>
+                <p></p>
+                <p id="current-prompt">
+                    <span class="machine">user@sugo14-dot-ca</span>:<span class="dir">/</span>$
+                    <span id="typed"></span><span id="cursor">█</span>
+                </p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

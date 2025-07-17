@@ -1,0 +1,53 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+:root {
+    --terminal-back: #000000;
+    --terminal-text: #ffffff;
+    --machine-text: #37e037;
+    --dir-text: #4c8bff;
+}
+
+body {
+    font-family: monospace;
+    background-color: var(--terminal-back);
+    color: var(--terminal-text);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    font-size: 15px;
+}
+
+#terminal {
+    width: 93vw;
+    height: 100vh;
+}
+
+.machine {
+    font-weight: bold;
+    color: var(--machine-text);
+}
+
+.dir {
+    color: var(--dir-text);
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
+
+#cursor {
+    animation: blink 1.2s infinite;
+    user-select: none;
+}
