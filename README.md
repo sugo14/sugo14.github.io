@@ -1,3 +1,7 @@
 # sugo14's Portfolio
 
-My unique personal portfolio site styled like a terminal. I wanted a site to post blogs and put my projects on, but I wanted to do something different than the React sites I see every day. 
+My personal portfolio site, styled like a terminal. I wanted a place for blogs projects, but I wanted to do something other than a cookie-cutter React site, despite my limited web-dev experience.
+
+Current state:
+
+![Terminal site right now](github/7-16-2025-start.gif)
