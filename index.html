@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>sugo14</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="images/sugo.webp" type="image/webp">
-    </head>
-    <body>
-        <div id="terminal-parent">
-            <div id="terminal">
-                <p style="white-space: pre;">
-┌─────┬──┬──┬─────┬─────┬───┬─┬─┐
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sugo14</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/sugo.webp" type="image/webp">
+</head>
+<body>
+    <div id="terminal-parent">
+        <div id="terminal">
+            <span id="char-measure">0</span>
+            <div id="header">
+                <p class="center pre">┌─────┬──┬──┬─────┬─────┬───┬─┬─┐
 │   ──┤  │  │  ┌──┤  ╷  ├─┐ │ ╵ │
 ├──   │     │  ╵  │  ╵  ├─┘ └─┐ │
 └─────┴─────┴─────┴─────┴─────┴─┘</p>
-                <p>
-                    <span class="machine">user@sugo14-dot-ca</span>:<span class="dir">/</span>$
-                    help
+                <p class="hor-bar center">
+    ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
                 </p>
-                <p>Available commands: about, projects, contact</p>
-                <p></p>
-                <p id="current-prompt">
-                    <span class="machine">user@sugo14-dot-ca</span>:<span class="dir">/</span>$
-                    <span id="typed"></span><span id="cursor">█</span>
+                <p class="center pre">About         │        Blog         │      Projects</p>
+                <p class="hor-bar center line">
+    ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
                 </p>
             </div>
-        </div>
+            <p class="center pre">┌─┐┌─┐┌─┐  ┌─┐┌─┐┌┬┐┬┌┬┐┬┌─┐┌─┐┌┬┐┬┌─┐┌┐┌  ┌─┐┬─┐┌─┐┌─┐┌┬┐┌─┐┌─┐  ┬  ┬┌─┐  ┌┬┐┌─┐  ┬ ┬┌─┐┬ ┬
+│ ┬│  │    │ │├─┘ │ │││││┌─┘├─┤ │ ││ ││││  ├─┘├┬┘├─┤│ ┬│││├─┤└─┐  │  │├┤    │ │ │  └┬┘│ ││ │
+└─┘└─┘└─┘  └─┘┴   ┴ ┴┴ ┴┴└─┘┴ ┴ ┴ ┴└─┘┘└┘  ┴  ┴└─┴ ┴└─┘┴ ┴┴ ┴└─┘  ┴─┘┴└─┘   ┴ └─┘   ┴ └─┘└─┘
 
-        <script src="script.js"></script>
-    </body>
+</p>
+            <p class=""><span style="font-style:italic; font-weight:bold;">2024-09-22</span> <br><br>
+
+GCC has many optimization pragmas that can be prepended to files. Generally, they should speed up your code the same amount as the equivalent command-line argument, however this is not always the case. <br><br>
+
+Theoretically, you would expect <br><br>
+
+| #pragma GCC optimize("O3") <br><br>
+
+to optimize your code the same way as <br><br>
+
+| g++ main.cpp -O3 <br><br>
+
+But it doesn't! Let's take a look at an example program:</p>
+            <!-- <p class="line">
+                <span class="machine">user@sugo14-dot-ca</span>:<span class="dir">/</span>$
+                help
+            </p>
+            <p class="line">Available commands: about, blog, projects</p>
+            <p></p>
+            <p id="current-prompt">
+                <span class="machine">user@sugo14-dot-ca</span>:<span class="dir">/</span>$
+                <span id="typed"></span><span id="cursor">█</span>
+            </p> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
