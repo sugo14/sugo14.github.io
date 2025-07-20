@@ -12,49 +12,52 @@
         <div id="terminal">
             <span id="char-measure">0</span>
             <div id="header">
-                <p class="center pre">┌─────┬──┬──┬─────┬─────┬───┬─┬─┐
-│   ──┤  │  │  ┌──┤  ╷  ├─┐ │ ╵ │
-├──   │     │  ╵  │  ╵  ├─┘ └─┐ │
-└─────┴─────┴─────┴─────┴─────┴─┘</p>
+                <p class="center pre">┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
+┃   ━━┫  ┃  ┃  ┏━━┫  ╻  ┣━┓ ┃ ╹ ┃
+┣━━   ┃     ┃  ╹  ┃  ╹  ┣━┛ ┗━┓ ┃
+┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┻━┛</p>
                 <p class="hor-bar center">
-    ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 </p>
-                <p class="center pre">About         │        Blog         │      Projects</p>
+                <p class="center pre">About         ┃        Blog         ┃      Projects</p>
                 <p class="hor-bar center line">
-    ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 </p>
             </div>
-            <p class="center pre">┌─┐┌─┐┌─┐  ┌─┐┌─┐┌┬┐┬┌┬┐┬┌─┐┌─┐┌┬┐┬┌─┐┌┐┌  ┌─┐┬─┐┌─┐┌─┐┌┬┐┌─┐┌─┐  ┬  ┬┌─┐  ┌┬┐┌─┐  ┬ ┬┌─┐┬ ┬
-│ ┬│  │    │ │├─┘ │ │││││┌─┘├─┤ │ ││ ││││  ├─┘├┬┘├─┤│ ┬│││├─┤└─┐  │  │├┤    │ │ │  └┬┘│ ││ │
-└─┘└─┘└─┘  └─┘┴   ┴ ┴┴ ┴┴└─┘┴ ┴ ┴ ┴└─┘┘└┘  ┴  ┴└─┴ ┴└─┘┴ ┴┴ ┴└─┘  ┴─┘┴└─┘   ┴ └─┘   ┴ └─┘└─┘
-
+            <div id="content">
+                <p id="blog-title" class="pre line">┏━┓┏━┓┏━┓   ┏━┓┏━┓┏┳┓┳┏┳┓┳┏━┓┏━┓┏┳┓┳┏━┓┏┓┏   ┏━┓┳━┓┏━┓┏━┓┏┳┓┏━┓┏━┓   ┳  ┳┏━┓   ┏┳┓┏━┓   ┳ ┳┏━┓┳ ┳
+┃╺┓┃  ┃     ┃ ┃┣━┛ ┃ ┃┃┃┃┃┏━┛┣━┫ ┃ ┃┃ ┃┃┃┃   ┣━┛┣┳┛┣━┫┃╺┓┃┃┃┣━┫┗━┓   ┃  ┃┣━     ┃ ┃ ┃   ┗┳┛┃ ┃┃ ┃
+┗━┛┗━┛┗━┛   ┗━┛┻   ┻ ┻┻ ┻┻┗━┛┻ ┻ ┻ ┻┗━┛┛┗┛   ┻  ┻┗╸┻ ┻┗━┛┻ ┻┻ ┻┗━┛   ┻━┛┻┗━┛    ┻ ┗━┛    ┻ ┗━┛┗━┛
 </p>
-            <p class=""><span style="font-style:italic; font-weight:bold;">2024-09-22</span> <br><br>
+                <p id="date" class="line">━━ 2024-09-22 ━━</p>
+                <p>
+    GCC has many optimization pragmas that can be prepended to files. Generally, they should speed up your code the same amount as the equivalent command-line argument, however this is not always the case. <br><br>
 
-GCC has many optimization pragmas that can be prepended to files. Generally, they should speed up your code the same amount as the equivalent command-line argument, however this is not always the case. <br><br>
+    Theoretically, you would expect <br><br>
 
-Theoretically, you would expect <br><br>
+    | #pragma GCC optimize("O3") <br><br>
 
-| #pragma GCC optimize("O3") <br><br>
+    to optimize your code the same way as <br><br>
 
-to optimize your code the same way as <br><br>
+    | g++ main.cpp -O3 <br><br>
 
-| g++ main.cpp -O3 <br><br>
-
-But it doesn't! Let's take a look at an example program:</p>
-            <!-- <p class="line">
-                <span class="machine">user@sugo14-dot-ca</span>:<span class="dir">/</span>$
-                help
-            </p>
-            <p class="line">Available commands: about, blog, projects</p>
-            <p></p>
-            <p id="current-prompt">
-                <span class="machine">user@sugo14-dot-ca</span>:<span class="dir">/</span>$
-                <span id="typed"></span><span id="cursor">█</span>
-            </p> -->
+    But it doesn't! Let's take a look at an example program:</p>
+                <!-- <p class="line">
+                    <span class="machine">user@sugo14-dot-ca</span>:<span class="dir">/</span>$
+                    help
+                </p>
+                <p class="line">Available commands: about, blog, projects</p>
+                <p></p>
+                <p id="current-prompt">
+                    <span class="machine">user@sugo14-dot-ca</span>:<span class="dir">/</span>$
+                    <span id="typed"></span><span id="cursor">█</span>
+                </p> -->
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="src/asciifont.js"></script>
+    <script type="module" src="src/gridstring.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

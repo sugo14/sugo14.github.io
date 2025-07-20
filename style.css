@@ -42,6 +42,11 @@ body {
     position: absolute;
 }
 
+#content {
+    width: 85%;
+    margin: 0 auto;
+}
+
 .machine {
     font-weight: bold;
     color: var(--machine-text);
@@ -71,9 +76,13 @@ body {
 
 .center {
     text-align: center;
-    font-weight: bold;
 }
 
 .line {
     margin-bottom: 19px;
+}
+
+#date {
+    font-style: italic;
+    font-weight: bold;
 }
