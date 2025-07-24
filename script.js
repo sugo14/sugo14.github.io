@@ -1,12 +1,13 @@
 import { ASCIIFont } from "./src/asciifont.js";
 import { GridString } from "./src/gridstring.js";
 
-let terminal = document.getElementById('terminal');
-let currPrompt = document.getElementById('current-prompt');
-let typed = document.getElementById('typed');
-let horBars = document.getElementsByClassName('hor-bar');
-let charMeasure = document.getElementById("char-measure");
-let blogTitle = document.getElementById('blog-title');
+const terminal = document.getElementById('terminal');
+const currPrompt = document.getElementById('current-prompt');
+const typed = document.getElementById('typed');
+const horBars = document.getElementsByClassName('hor-bar');
+const charMeasure = document.getElementById("char-measure");
+const blogTitle = document.getElementById('blog-title');
+const upperHeader = document.getElementById('upper-header');
 
 const font = await ASCIIFont.fromFontFile("font");
 const blogTitleString = "gcc optimization pragmas lie to you";
@@ -27,6 +28,8 @@ function resizeHorBars() {
 }
 
 function resizeBlogTitle() {
+    if (!document.body.classList.contains("blog-page")) { return; }
+
     const width = blogTitle.offsetWidth;
     const lineWidth = Math.floor(width / charWidth);
     const words = blogTitleString.split(" ");
@@ -77,9 +80,6 @@ function resizeBlogTitle() {
     blogTitle.textContent = title.toString();
 }
 
-resizeHorBars();
-resizeBlogTitle();
-
 window.addEventListener("resize", () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => { // debounce
@@ -88,12 +88,5 @@ window.addEventListener("resize", () => {
     }, 150);
 });
 
-window.addEventListener("keydown", async (e) => {
-    // if (e.key.length === 1) { typed.textContent += e.key; }
-    // else if (e.key === 'Backspace') { typed.textContent = typed.textContent.slice(0, -1); }
-    // else if (e.key === 'Enter') {
-    //     const command = typed.textContent;
-    //     // deal with commands
-    //     typed.textContent = '';
-    // }
-});
+resizeHorBars();
+resizeBlogTitle();

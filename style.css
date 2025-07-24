@@ -6,9 +6,11 @@
 
 :root {
     --terminal-back: #000000;
-    --terminal-text: #ffffff;
+    --terminal-text: #eeeeee;
     --machine-text: #37e037;
     --dir-text: #4c8bff;
+
+    --yellow: #ffff22;
 }
 
 html {
@@ -85,4 +87,20 @@ body {
 #date {
     font-style: italic;
     font-weight: bold;
+}
+
+a {
+    color: var(--terminal-text);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--yellow);
+}
+
+#upper-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
 }
