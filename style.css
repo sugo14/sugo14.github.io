@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +30,8 @@
 }
 
 :root {
-    --terminal-back: #000000;
-    --terminal-text: #eeeeee;
+    --terminal-back: #07070a;
+    --terminal-text: #dddddd;
     --machine-text: #37e037;
     --dir-text: #4c8bff;
 
@@ -29,14 +54,13 @@ body {
 }
 
 #terminal {
-    font-family: monospace;
+    font-family: 'JetBrains Mono', monospace;
     color: var(--terminal-text);
 
     width: 92vw;
     height: 95vh;
 
     font-size: 16px;
-    line-height: 19px; /* the magic number for this height of monospace */
 }
 
 #char-measure {
@@ -90,12 +114,13 @@ body {
 }
 
 a {
-    color: var(--terminal-text);
+    color: var(--yellow);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--yellow);
+    color: var(--terminal-back);
+    background-color: var(--yellow);
 }
 
 #upper-header {
@@ -103,4 +128,23 @@ a:hover {
     justify-content: center;
     align-items: center;
     gap: 48px;
+}
+
+.blog-content * {
+    margin-bottom: 19px;
+}
+
+pre {
+    /* background-color: #EEEEEE; */
+    font-family: inherit;
+    /* margin-inline: inherit;
+    margin-block: inherit; */
+    width: 100%;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 16px;
+}
+
+code {
+    font-family: inherit;
 }

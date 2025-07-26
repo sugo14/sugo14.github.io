@@ -1,4 +1,4 @@
-import { GridString } from "./gridstring.js";
+import { GridString } from "./gridString.js";
 
 export class ASCIIFont {
     constructor(gridstringArray) {
@@ -6,7 +6,7 @@ export class ASCIIFont {
     }
 
     static async fromFontFile(filename) {
-        const response = await fetch("../fonts/" + filename + ".txt");
+        const response = await fetch("/fonts/" + filename + ".txt");
         const text = await response.text();
 
         const fontGlyphs = [];

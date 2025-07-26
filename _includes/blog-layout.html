@@ -6,16 +6,20 @@
     <title>sugo14</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/images/sugo.webp" type="image/webp">
+    <link
+			href="/code.css"
+			rel="stylesheet"
+		/>
 </head>
-<body>
+<body class="blog-page">
     <div id="terminal-parent">
         <div id="terminal">
             <span id="char-measure">0</span>
             <div id="header">
-                <p class="center pre upline" id="username">┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
+                <p class="center pre" id="username"><a href="/">┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
 ┃   ━━┫  ┃  ┃  ┏━━┫  ╻  ┣━┓ ┃ ╹ ┃
 ┣━━   ┃     ┃  ╹  ┃  ╹  ┣━┛ ┗━┓ ┃
-┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┻━┛</p>
+┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┻━┛</a></p>
                 <p class="hor-bar center">
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 </p>
@@ -24,11 +28,17 @@
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 </p>
             </div>
+            <div id="content" class="blog-content">
+                <p id="blog-title" class="pre line">{{ title }}</p>
+                <p id="date" class="line">━━ {{ date | blogDateFormat }} ━━</p>
+                {{ content }}
+            </div>
         </div>
     </div>
 
     <script type="module" src="/src/asciiFont.js"></script>
     <script type="module" src="/src/gridString.js"></script>
     <script type="module" src="/src/script.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> -->
 </body>
 </html>

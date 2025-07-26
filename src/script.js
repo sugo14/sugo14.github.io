@@ -1,5 +1,5 @@
-import { ASCIIFont } from "./src/asciifont.js";
-import { GridString } from "./src/gridstring.js";
+import { ASCIIFont } from "./asciiFont.js";
+import { GridString } from "./gridString.js";
 
 const terminal = document.getElementById('terminal');
 const currPrompt = document.getElementById('current-prompt');
@@ -9,7 +9,12 @@ const charMeasure = document.getElementById("char-measure");
 const blogTitle = document.getElementById('blog-title');
 const upperHeader = document.getElementById('upper-header');
 
-const font = await ASCIIFont.fromFontFile("font");
+let font;
+async function initFont() {
+    font = await ASCIIFont.fromFontFile("font");
+}
+await initFont();
+
 const blogTitleString = "gcc optimization pragmas lie to you";
 const horBarChar = '━';
 
