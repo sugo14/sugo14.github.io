@@ -13,7 +13,6 @@ let font;
 async function initFont() {
     font = await ASCIIFont.fromFontFile("ascii");
 }
-await initFont();
 
 const blogTitleString = "gcc optimization pragmas lie to you";
 const horBarChar = '━';
@@ -26,7 +25,7 @@ function getCharWidth() { charWidth = charMeasure.getBoundingClientRect().width;
 function resizeHorBars() {
     const width = terminal.offsetWidth;
     getCharWidth();
-    const charCnt = Math.floor(width / charWidth);
+    const charCnt = Math.round(width / charWidth);
     for (const horBar of horBars) {
         horBar.textContent = horBarChar.repeat(charCnt);
     }
@@ -93,5 +92,8 @@ window.addEventListener("resize", () => {
     }, 150);
 });
 
-resizeHorBars();
-resizeBlogTitle();
+window.addEventListener("load", async () => {
+    await initFont();
+    resizeHorBars();
+    resizeBlogTitle();
+});
