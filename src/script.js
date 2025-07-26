@@ -11,7 +11,7 @@ const upperHeader = document.getElementById('upper-header');
 
 let font;
 async function initFont() {
-    font = await ASCIIFont.fromFontFile("font");
+    font = await ASCIIFont.fromFontFile("ascii");
 }
 await initFont();
 
