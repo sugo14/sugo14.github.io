@@ -25,4 +25,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setLibrary("md", md);
 
     eleventyConfig.addPlugin(syntaxHighlight);
+
+    return {
+        dir: {
+            input: ".",
+            includes: "_includes",
+            output: "_site"
+        }
+    };
 }
