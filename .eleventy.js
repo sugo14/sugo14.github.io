@@ -4,10 +4,9 @@ const markdownIt = require("markdown-it");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("fonts");
-    eleventyConfig.addPassthroughCopy("src");
-    eleventyConfig.addPassthroughCopy("style.css");
-    eleventyConfig.addPassthroughCopy("code.css");
-    eleventyConfig.addPassthroughCopy("images");
+    eleventyConfig.addPassthroughCopy("scripts");
+    eleventyConfig.addPassthroughCopy("css");
+    eleventyConfig.addPassthroughCopy("assets");
 
     eleventyConfig.addFilter("blogDateFormat", function(date) {
         return DateTime.fromJSDate(new Date(date)).toFormat("yyyy-MM-dd")

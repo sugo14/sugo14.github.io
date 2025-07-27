@@ -1,24 +1,24 @@
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    src: url('/assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    src: url('/assets/fonts/JetBrainsMono-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('/fonts/JetBrainsMono-Italic.woff2') format('woff2');
+    src: url('/assets/fonts/JetBrainsMono-Italic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
 }
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('/fonts/JetBrainsMono-BoldItalic.woff2') format('woff2');
+    src: url('/assets/fonts/JetBrainsMono-BoldItalic.woff2') format('woff2');
     font-weight: 700;
     font-style: italic;
 }
@@ -34,8 +34,9 @@
     --terminal-text: #dddddd;
     --machine-text: #37e037;
     --dir-text: #4c8bff;
-
     --yellow: #ffff22;
+
+    --line-height: 22px;
 }
 
 html {
@@ -59,7 +60,7 @@ body {
 
     width: 92vw;
     min-height: 100vh;
-    padding: 22px 0;
+    padding: var(--line-height) 0;
 
     font-size: 16px;
 
@@ -110,7 +111,7 @@ body {
 }
 
 .line {
-    margin-bottom: 22px;
+    margin-bottom: var(--line-height);
 }
 
 #date {
@@ -136,7 +137,7 @@ a:hover {
 }
 
 .blog-content * {
-    margin-bottom: 22px;
+    margin-bottom: var(--line-height);
 }
 
 pre {
@@ -145,8 +146,8 @@ pre {
     /* margin-inline: inherit;
     margin-block: inherit; */
     width: 100%;
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: var(--line-height);
+    padding-bottom: var(--line-height);
     padding-left: 16px;
 }
 
@@ -155,11 +156,17 @@ code {
 }
 
 footer {
-    margin-top: 22px;
+    margin-top: var(--line-height);
 }
 
 footer .content {
     display: flex;
     justify-content: space-between;
     align-items: top;
+
+    padding: 0 3ch;
+}
+
+footer .left {
+    margin-right: 2ch;
 }
