@@ -22,6 +22,23 @@ module.exports = function(eleventyConfig) {
         }
     });
 
+    eleventyConfig.addGlobalData("eleventyComputed", {
+        layout: (data) => {
+            if (data.page && data.page.inputPath.startsWith("./blog/") && data.page.inputPath.endsWith(".md")) {
+                return "blog-layout.html";
+            }
+            return data.layout;
+        },
+        permalink: (data) => {
+            if (data.page && data.page.inputPath.startsWith("./blog/") && data.page.inputPath.endsWith(".md")) {
+                if (data.slug) {
+                    return `blog/${data.slug}/index.html`;
+                }
+            }
+            return data.permalink;
+        },
+    });
+
     eleventyConfig.setLibrary("md", md);
 
     eleventyConfig.addPlugin(syntaxHighlight);
@@ -31,7 +48,6 @@ module.exports = function(eleventyConfig) {
             input: ".",
             includes: "_includes",
             output: "_site"
-        },
-        format: "directory"
+        }
     };
 }

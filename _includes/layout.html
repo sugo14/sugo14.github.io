@@ -16,23 +16,38 @@
         <div id="terminal">
             <span id="char-measure">0</span>
             <div id="header">
-                <p class="center pre" id="username"><a href="/">┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
+                <p class="center pre" id="username">{% if curr-page == "home" %}┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
 ┃   ━━┫  ┃  ┃  ┏━━┫  ╻  ┣━┓ ┃ ╹ ┃
 ┣━━   ┃     ┃  ╹  ┃  ╹  ┣━┛ ┗━┓ ┃
-┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┻━┛</a></p>
+┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┻━┛{% else %}<a href="/">┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
+┃   ━━┫  ┃  ┃  ┏━━┫  ╻  ┣━┓ ┃ ╹ ┃
+┣━━   ┃     ┃  ╹  ┃  ╹  ┣━┛ ┗━┓ ┃
+┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┻━┛</a>{% endif %}</p>
                 <p class="hor-bar center">
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 </p>
                 <p class="center nav">
-                    <a href="/about/">About</a>
+                    {% if curr-page == "about" %}
+                        About
+                    {% else %}
+                        <a href="/about/">About</a>
+                    {% endif %}
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     ┃
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/blog/">Blog</a>
+                    {% if curr-page == "blog" %}
+                        Blog
+                    {% else %}
+                        <a href="/blog/">Blog</a>
+                    {% endif %}
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     ┃
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/projects/">Projects</a>
+                    {% if curr-page == "projects" %}
+                        Projects
+                    {% else %}
+                        <a href="/projects/">Projects</a>
+                    {% endif %}
                 </p>
                 <p class="hor-bar center line">
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -40,8 +55,6 @@
             </div>
 
             <div id="content" class="blog-content">
-                <p id="blog-title" class="pre line">{{ title }}</p>
-                <p id="date" class="line">━━ {{ date | blogDateFormat }} ━━</p>
                 {{ content }}
             </div>
 
