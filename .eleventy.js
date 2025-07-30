@@ -9,7 +9,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
 
     eleventyConfig.addFilter("blogDateFormat", function(date) {
-        return DateTime.fromJSDate(new Date(date)).toFormat("yyyy-MM-dd")
+        return DateTime.fromJSDate(new Date(date), { zone: 'utc' }).toFormat("yyyy-MM-dd")
     });
 
     const md = markdownIt({
