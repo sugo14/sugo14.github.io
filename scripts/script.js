@@ -6,15 +6,20 @@ const currPrompt = document.getElementById('current-prompt');
 const typed = document.getElementById('typed');
 const horBars = document.getElementsByClassName('hor-bar');
 const charMeasure = document.getElementById("char-measure");
-const blogTitle = document.getElementById('blog-title');
 const upperHeader = document.getElementById('upper-header');
+const sugoGif = document.getElementById('sugo-gif');
+
+const asciiTitles = document.getElementsByClassName('ascii-title');
+let asciiTitlesStrings = [];
+function initAsciiTitles() {
+    for (const title of asciiTitles) { asciiTitlesStrings.push(title.textContent.toLowerCase()); }
+}
 
 let font;
 async function initFont() {
-    font = await ASCIIFont.fromFontFile("ascii");
+    font = await ASCIIFont.fromFontFile("asciiNoSerif");
 }
 
-const blogTitleString = "gcc optimization pragmas lie to you";
 const horBarChar = '━';
 
 let resizeTimeout;
@@ -23,16 +28,17 @@ let charWidth;
 function getCharWidth() { charWidth = charMeasure.getBoundingClientRect().width; }
 
 function resizeHorBars() {
-    const width = terminal.offsetWidth;
     getCharWidth();
-    const charCnt = Math.round(width / charWidth);
     for (const horBar of horBars) {
+        const width = horBar.offsetWidth;
+        const charCnt = Math.round(width / charWidth);
         horBar.textContent = horBarChar.repeat(charCnt);
     }
 }
 
-function resizeBlogTitle() {
-    if (!document.body.classList.contains("blog-page")) { return; }
+function resizeBlogTitle(i) {
+    const blogTitle = asciiTitles[i];
+    const blogTitleString = asciiTitlesStrings[i];
 
     const width = blogTitle.offsetWidth;
     const lineWidth = Math.floor(width / charWidth);
@@ -84,16 +90,21 @@ function resizeBlogTitle() {
     blogTitle.textContent = title.toString();
 }
 
+function resizeBlogTitles() {
+    for (let i = 0; i < asciiTitles.length; i++) { resizeBlogTitle(i); }
+}
+
 window.addEventListener("resize", () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => { // debounce
         resizeHorBars();
-        resizeBlogTitle();
+        resizeBlogTitles();
     }, 150);
 });
 
 window.addEventListener("load", async () => {
     await initFont();
+    initAsciiTitles();
     resizeHorBars();
-    resizeBlogTitle();
+    resizeBlogTitles();
 });

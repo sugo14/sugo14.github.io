@@ -26,6 +26,11 @@ export class ASCIIFont {
     }
 
     access(char) {
+        if (char == ',') { return this.glyphs[26]; }
+        if (char == '.') { return this.glyphs[27]; }
+        if (char == '!') { return this.glyphs[28]; }
+        if (char == '?') { return this.glyphs[29]; }
+        if (char == '\'') { return this.glyphs[30]; }
         return this.glyphs[char.charCodeAt(0) - 'a'.charCodeAt(0)]
     }
 

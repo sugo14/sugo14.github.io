@@ -42,6 +42,13 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPlugin(syntaxHighlight);
 
+    eleventyConfig.addCollection("blogs", function(collectionApi) {
+        const blogs = collectionApi.getFilteredByGlob("./blog/*.md");
+        return blogs.sort((a, b) => {
+            return new Date(b.date) - new Date(a.date); // descending
+        });
+    });
+
     return {
         dir: {
             input: ".",

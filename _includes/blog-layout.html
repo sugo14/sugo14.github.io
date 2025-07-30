@@ -31,7 +31,7 @@
                     <a href="/blog/">Blog</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     ┃
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/projects/">Projects</a>
                 </p>
                 <p class="hor-bar center line">
@@ -40,8 +40,8 @@
             </div>
 
             <div id="content" class="blog-content">
-                <p id="blog-title" class="pre line">{{ title }}</p>
-                <p id="date" class="line">━━ {{ date | blogDateFormat }} ━━</p>
+                <p class="line ascii-title">{{ title }}</p>
+                <p id="date" class="line">━━ {{ data.date | blogDateFormat }} ━━</p>
                 {{ content }}
             </div>
 

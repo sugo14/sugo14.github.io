@@ -140,6 +140,10 @@ a:hover {
     margin-bottom: var(--line-height);
 }
 
+/* .blog-content > *:last-child {
+    margin-bottom: 0;
+} */
+
 pre {
     /* background-color: #EEEEEE; */
     font-family: inherit;
@@ -169,4 +173,34 @@ footer .content {
 
 footer .left {
     margin-right: 2ch;
+}
+
+.ascii-title {
+    white-space: pre;
+}
+
+ol {
+    padding-left: 6ch;
+}
+
+.blog-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+
+    padding: 0 3ch;
+}
+
+.blog-post .left {
+    width: 25%;
+    padding-right: 3ch;
+}
+
+.blog-post .middle {
+    width: 15%;
+}
+
+.blog-post .right {
+    padding-left: 3ch;
+    width: 60%;
 }
