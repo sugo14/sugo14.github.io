@@ -19,7 +19,12 @@ module.exports = function(eleventyConfig) {
             const languageClass = lang ? `lang-${lang}` : "";
             return `<pre><code class="${languageClass} prettyprint">${escaped}</code></pre>`;
         }
+        
     });
+
+    md.renderer.rules.hr = function (tokens, idx, options, env) {
+        return '<p class="hor-bar thin"></p>\n';
+    };
 
     eleventyConfig.addGlobalData("eleventyComputed", {
         layout: (data) => {

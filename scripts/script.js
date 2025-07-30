@@ -21,6 +21,7 @@ async function initFont() {
 }
 
 const horBarChar = '━';
+const thinHorBarChar = '─';
 
 let resizeTimeout;
 let charWidth;
@@ -32,7 +33,11 @@ function resizeHorBars() {
     for (const horBar of horBars) {
         const width = horBar.offsetWidth;
         const charCnt = Math.round(width / charWidth);
-        horBar.textContent = horBarChar.repeat(charCnt);
+
+        if (horBar.classList.contains('thin')) {
+            horBar.textContent = thinHorBarChar.repeat(charCnt);
+        }
+        else { horBar.textContent = horBarChar.repeat(charCnt); }
     }
 }
 
@@ -107,4 +112,8 @@ window.addEventListener("load", async () => {
     initAsciiTitles();
     resizeHorBars();
     resizeBlogTitles();
+
+    if (sugoGif) {
+        
+    }
 });
