@@ -7,7 +7,6 @@ const typed = document.getElementById('typed');
 const horBars = document.getElementsByClassName('hor-bar');
 const charMeasure = document.getElementById("char-measure");
 const upperHeader = document.getElementById('upper-header');
-const sugoGif = document.getElementById('sugo-gif');
 
 const asciiTitles = document.getElementsByClassName('ascii-title');
 let asciiTitlesStrings = [];
@@ -112,8 +111,4 @@ window.addEventListener("load", async () => {
     initAsciiTitles();
     resizeHorBars();
     resizeBlogTitles();
-
-    if (sugoGif) {
-        
-    }
 });

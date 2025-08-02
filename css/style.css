@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('/assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    src: url('/assets/fonts/JetBrainsMono-Regular-Modified.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
@@ -203,4 +203,24 @@ ol {
 .blog-post .right {
     padding-left: 3ch;
     width: 60%;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--terminal-back);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--terminal-text);
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+* {
+    scrollbar-color: var(--terminal-text) var(--terminal-back);
+    scrollbar-width: thin;
+}
+
+#sugo-gif {
+}
+#sugo-gif span {
 }
