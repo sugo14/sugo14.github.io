@@ -81,11 +81,12 @@ body {
 
 .machine {
     font-weight: bold;
-    color: var(--machine-text);
+    color: var(--yellow);
 }
 
 .dir {
-    color: var(--dir-text);
+    color: #888888;
+    /* color: var(--dir-text); */
 }
 
 @keyframes blink {
@@ -182,6 +183,10 @@ footer .left {
 ol {
     padding-left: 6ch;
 }
+ul {
+    padding-left: 2ch;
+    list-style-type: square;
+}
 
 .blog-post {
     display: flex;
@@ -223,4 +228,8 @@ ol {
 #sugo-gif {
 }
 #sugo-gif span {
+}
+
+.red {
+    color: red;
 }

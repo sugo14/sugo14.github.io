@@ -1,0 +1,20 @@
+---
+layout: layout.html
+---
+
+<p><span class="machine">
+    user@sugo14-dot-ca</span>:<span class="dir">/</span>$ cat
+    <span id="broken-url"></span>
+    <br><br>
+</p>
+
+<p class="line red">
+    ERROR 404: PAGE NOT FOUND,
+    <a href="/">
+        ABORT
+    </a>
+</p>
+
+<script>
+    document.getElementById('broken-url').textContent = window.location.href;
+</script>
