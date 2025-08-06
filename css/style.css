@@ -35,6 +35,8 @@
     --machine-text: #37e037;
     --dir-text: #4c8bff;
     --yellow: #ffff22;
+    --secondary-color: #ed8f23;
+    --tertiary-color: #dddddd;
 
     --line-height: 22px;
 }
@@ -232,4 +234,24 @@ ul {
 
 .red {
     color: red;
+}
+
+.highlight {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+.highlight-nobold {
+    color: var(--secondary-color);
+    font-weight: normal;
+}
+b {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.hor-bar {
+    color: var(--tertiary-color);
+}
+.tertiary {
+    color: var(--tertiary-color);
 }
