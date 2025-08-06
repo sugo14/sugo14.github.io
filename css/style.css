@@ -32,12 +32,30 @@
 :root {
     --terminal-back: #07070a;
     --terminal-text: #dddddd;
+    --tertiary-color: #dddddd;
+    --primary-color: #ffff22;
+    --secondary-color: #fc8e4a;
+
+    /* --terminal-back: #081a22;
+    --terminal-text: #f0cd91;
+    --primary-color: #ff8833;
+    --secondary-color: #349aa3;
+    --tertiary-color: #f0cd91; */
+
+    /* --terminal-back: #06041a;
+    --terminal-text: #a0a6f2;
+    --primary-color: #e1aa3e;
+    --secondary-color: #a6d01e;
+    --tertiary-color: #9ea6ec; */
+
+    /* --terminal-back: #07070a;
+    --terminal-text: #dddddd;
+    --tertiary-color: #dddddd;
+    --primary-color: #00ffff;
+    --secondary-color: #ff44cc; */
+
     --machine-text: #37e037;
     --dir-text: #4c8bff;
-    --yellow: #ffff22;
-    --secondary-color: #ed8f23;
-    --tertiary-color: #dddddd;
-
     --line-height: 22px;
 }
 
@@ -83,7 +101,7 @@ body {
 
 .machine {
     font-weight: bold;
-    color: var(--yellow);
+    color: var(--primary-color);
 }
 
 .dir {
@@ -123,13 +141,13 @@ body {
 }
 
 a {
-    color: var(--yellow);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 a:hover {
     color: var(--terminal-back);
-    background-color: var(--yellow);
+    background-color: var(--primary-color);
 }
 
 #upper-header {
@@ -186,7 +204,7 @@ ol {
     padding-left: 6ch;
 }
 ul {
-    padding-left: 2ch;
+    padding-left: 5ch;
     list-style-type: square;
 }
 
@@ -242,7 +260,6 @@ ul {
 }
 .highlight-nobold {
     color: var(--secondary-color);
-    font-weight: normal;
 }
 b {
     color: var(--secondary-color);
