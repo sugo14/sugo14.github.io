@@ -101,11 +101,11 @@ body {
 
 .machine {
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .dir {
-    color: #888888;
+    color: var(--tertiary-color);
     /* color: var(--dir-text); */
 }
 
@@ -264,6 +264,14 @@ ul {
 b {
     color: var(--secondary-color);
     font-weight: bold;
+}
+strong {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+em {
+    color: var(--secondary-color);
+    font-style: italic;
 }
 
 .hor-bar {
