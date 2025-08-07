@@ -1,9 +1,9 @@
 # sugo14's Portfolio
 
-My personal portfolio site, styled like a terminal. I wanted a place for blogs and projects, but I wanted to do something other than a cookie-cutter React site, despite my limited web-dev experience.
+My unique personal portfolio site designed so that it could theoretically be exactly reproduced in a standard terminal emulator. This meant I had to do a bunch of cool stuff to get different "regular" elements working, so please check it out!
 
 Visit it at [sugo14.github.io](https://sugo14.github.io).
 
-Current state:
+Current state: first draft finished!
 
-![Terminal site right now](github/7-26-2025-progress.png)
+![Terminal site appearance right now](github/8-6-2025-finished.png)
