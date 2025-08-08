@@ -161,9 +161,9 @@ a:hover {
     margin-bottom: var(--line-height);
 }
 
-/* .blog-content > *:last-child {
+.blog-content > *:last-child {
     margin-bottom: 0;
-} */
+}
 
 pre {
     /* background-color: #EEEEEE; */
