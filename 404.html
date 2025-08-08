@@ -1,21 +1,50 @@
 ---
-layout: layout.html
 permalink: /404.html
 ---
 
-<p><span class="machine">
-    user@sugo14-dot-ca</span>:<span class="dir">/</span>$ cat
-    <span id="broken-url"></span>
-    <br><br>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sugo14</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/assets/images/sugo.webp" type="image/webp">
+    <link
+			href="/css/code.css"
+			rel="stylesheet"
+		/>
+</head>
+<body>
+    <div id="terminal-parent">
+        <div id="terminal">
+            <span id="char-measure">0</span>
+            <div id="header">
+                <p><span class="machine">
+                    <br>
+                    user@sugo14-github-io</span>:<span class="dir">/</span>$ cat
+                    <span id="broken-url"></span>
+                    <br><br>
+                </p>
 
-<p class="line red">
-    ERROR 404: PAGE NOT FOUND,
-    <a href="/">
-        ABORT
-    </a>
-</p>
+                <p class="ascii-title red line">PAGE NOT FOUND!</p>
 
-<script>
-    document.getElementById('broken-url').textContent = window.location.href;
-</script>
+                <p class="line red">
+                    404:
+                    <a href="/">
+                        ABORT
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/scripts/asciiFont.js"></script>
+    <script type="module" src="/scripts/gridString.js"></script>
+    <script type="module" src="/scripts/script.js"></script>
+    <script type="module" src="/scripts/sugo.js"></script>
+    <script>
+        document.getElementById('broken-url').textContent = window.location.href;
+    </script>
+</body>
+</html>
