@@ -98,6 +98,35 @@ body {
     margin: 0 auto;
     flex: 1;
 }
+@media (max-width: 650px) {
+    #content {
+        padding: 0 3ch;
+        width: 100%;
+    }
+}
+
+#blog {
+    margin-left: 7ch;
+    margin-right: 7ch;
+}
+#about {
+    margin-right: 6ch;
+}
+#projects {
+    margin-left: 4ch;
+}
+@media (max-width: 680px) {
+    #blog {
+        margin-left: 4ch;
+        margin-right: 4ch;
+    }
+    #about {
+        margin-right: 4ch;
+    }
+    #projects {
+        margin-left: 3ch;
+    }
+}
 
 .machine {
     font-weight: bold;
@@ -133,6 +162,9 @@ body {
 
 .line {
     margin-bottom: var(--line-height);
+}
+.upline {
+    margin-top: var(--line-height);
 }
 
 #date {
@@ -191,6 +223,11 @@ footer .content {
 
     padding: 0 3ch;
 }
+@media (max-width: 650px) {
+    footer .content {
+        padding: 0 2ch;
+    }
+}
 
 footer .left {
     margin-right: 2ch;
@@ -206,6 +243,14 @@ ol {
 ul {
     padding-left: 5ch;
     list-style-type: square;
+}
+@media (max-width: 650px) {
+    ol {
+        padding-left: 3ch;
+    }
+    ul {
+        padding-left: 2ch;
+    }
 }
 
 .blog-post {
@@ -280,3 +325,16 @@ em {
 .tertiary {
     color: var(--tertiary-color);
 }
+
+@media (max-width: 657px) {
+    #make-your-own-site {
+        display: none;
+    }
+    #footer-ascii {
+        display: none;
+    }
+}
+
+/* 620px */
+/* 696px */
+/* 657px */

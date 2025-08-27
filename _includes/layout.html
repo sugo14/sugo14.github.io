@@ -26,29 +26,29 @@
                 <p class="hor-bar center">
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 </p>
-                <p class="center nav">
+                <div class="center nav">
                     {% if curr-page == "about" %}
-                        <span class="highlight">About</span>
+                        <span class="highlight" id="about">About</span>
                     {% else %}
-                        <a href="/about/">About</a>
+                        <a href="/about/" id="about">About</a>
                     {% endif %}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                     ┃
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                     {% if curr-page == "blog" %}
-                        <span class="highlight">Blog</span>
+                        <span class="highlight" id="blog">Blog</span>
                     {% else %}
-                        <a href="/blog/">Blog</a>
+                        <a href="/blog/" id="blog">Blog</a>
                     {% endif %}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                     ┃
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp; -->
                     {% if curr-page == "projects" %}
-                        <span class="highlight">Projects</span>
+                        <span class="highlight" id="projects">Projects</span>
                     {% else %}
-                        <a href="/projects/">Projects</a>
+                        <a href="/projects/" id="projects">Projects</a>
                     {% endif %}
-                </p>
+                </div>
                 <p class="hor-bar center line">
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 </p>
@@ -62,12 +62,12 @@
                 <p class="hor-bar"></p>
                 <div class="content">
                     <div class="left">
-                        <p class="line"><br>
+                        <p id="make-your-own-site"><br>
                             <b>Make your own site</b>, because it's
                             <a href="https://www.youtube.com/watch?v=0pyGTzgr940" target="_blank" rel="noopener noreferrer">
                             awesome</a>!
                         </p>
-                        <p>
+                        <p class="upline">
                             This project is
                             <a href="https://github.com/sugo14/Portfolio" target="_blank" rel="noopener noreferrer">open-source</a>
                             and licensed under the
@@ -76,8 +76,8 @@
                         </p>
                     </div>
 
-                    <div class="right">
-                            <p class="pre"><a href="https://asciiart.website/art/642"  target="_blank" rel="noopener noreferrer">            __ 
+                    <div class="right" id="footer-ascii">
+                            <p class="pre ascii-art"><a href="https://asciiart.website/art/642"  target="_blank" rel="noopener noreferrer">            __ 
            / _)
     .-^^^-/ /  
  __/       /   
