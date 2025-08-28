@@ -127,6 +127,30 @@ body {
         margin-left: 3ch;
     }
 }
+@media (max-width: 450px) {
+    #blog {
+        margin-left: 2ch;
+        margin-right: 2ch;
+    }
+    #about {
+        margin-right: 2ch;
+    }
+    #projects {
+        margin-left: 2ch;
+    }
+}
+@media (max-width: 350px) {
+    #blog {
+        margin-left: 1ch;
+        margin-right: 1ch;
+    }
+    #about {
+        margin-right: 1ch;
+    }
+    #projects {
+        margin-left: 1ch;
+    }
+}
 
 .machine {
     font-weight: bold;
@@ -338,3 +362,4 @@ em {
 /* 620px */
 /* 696px */
 /* 657px */
+/* 444px */
