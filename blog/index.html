@@ -5,15 +5,17 @@ curr-page: blog
 
 <p class="ascii-title center line">Recent Posts</p>
 
+<p class="hor-bar thin"></p>
+
 {% for blog in collections.blogs %}
-    <p class="hor-bar thin line"></p>
-    <div class="blog-post line">
-        <p>
-            <i class="highlight-nobold">{{ blog.data.date | blogDateFormat }}</i>
+    <div class="blog-post upline">
+        <p class="blog-post-header">
+            <i class="blog-date">{{ blog.data.date | blogDateFormat }}</i>
             &nbsp;
-            <b><a href="{{ blog.url }}">{{ blog.data.title }}</a></b>
-            <br><br>
-            {{ blog.data.description }}
+            <b><a href="{{ blog.url }}" class="blog-post-title">{{ blog.data.title }}</a></b>
         </p>
+        <br>
+        {{ blog.data.description }}
     </div>
+    <p class="hor-bar thin upline"></p>
 {% endfor %}
