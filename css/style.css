@@ -56,7 +56,7 @@
 
     --machine-text: #37e037;
     --dir-text: #4c8bff;
-    --line-height: 22px;
+    --line-height: 21.5px;
 }
 
 html {
@@ -403,4 +403,30 @@ em {
         display: none;
         position: absolute;
     }
+}
+
+#banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 3ch;
+}
+@media (max-width: 650px) {
+    #banner {
+        padding: 0 2ch;
+    }
+}
+
+#view-count {
+    margin-top: var(--line-height);
+}
+
+iframe {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+    width: 200px !important;
+    height: 60px !important;
+    border: 2px solid red !important;
+    background: yellow !important;
 }

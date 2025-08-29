@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        font-src 'self';
+        script-src  'self' 'unsafe-inline' https://gc.zgo.at/count.js;
+        connect-src 'self' https://sugo14.goatcounter.com/count;
+    "> -->
     <title>sugo14</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/assets/images/sugo.webp" type="image/webp">
@@ -16,13 +24,22 @@
         <div id="terminal">
             <span id="char-measure">0</span>
             <div id="header">
-                <p class="center pre" id="username">{% if curr-page == "home" %}<span class="highlight">┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
+                <div id="banner">
+                    <div id="view-count">
+                        <p class="pre">&lt;o&gt; 
+<span id="view-count-value"></span></p>
+                    </div>
+                    <p class="center pre" id="username">{% if curr-page == "home" %}<span class="highlight">┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
 ┃   ━━┫  ┃  ┃  ┏━━┫  ╻  ┣━┓ ┃ ╹ ┃
 ┣━━   ┃     ┃  ╹  ┃  ╹  ┣━┛ ┗━┓ ┃
 ┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┻━┛</span>{% else %}<a href="/">┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
 ┃   ━━┫  ┃  ┃  ┏━━┫  ╻  ┣━┓ ┃ ╹ ┃
 ┣━━   ┃     ┃  ╹  ┃  ╹  ┣━┛ ┗━┓ ┃
 ┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┻━┛</a>{% endif %}</p>
+                    <p class="pre"><a href="javascript:toggleTheme()">
+(v)
+ ≡ </a></p>
+                </div>
                 <p class="hor-bar center">
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 </p>
@@ -92,7 +109,9 @@
     <script type="module" src="/scripts/gridString.js"></script>
     <script type="module" src="/scripts/script.js"></script>
     <script type="module" src="/scripts/sugo.js"></script>
+    <script type="module" src="/scripts/counter.js"></script>
+    <script type="module" src="/scripts/themes.js"></script>
     <script data-goatcounter="https://sugo14.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+        async src="/scripts/count.js"></script>
 </body>
 </html>

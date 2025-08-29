@@ -16,10 +16,19 @@
         <div id="terminal">
             <span id="char-measure">0</span>
             <div id="header">
-                <p class="center pre" id="username"><a href="/">┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
+                <div id="banner">
+                    <div id="view-count">
+                        <p class="pre">&lt;o&gt; 
+<span id="view-count-value"></span></p>
+                    </div>
+                    <p class="center pre" id="username"><a href="/">┏━━━━━┳━━┳━━┳━━━━━┳━━━━━┳━━━┳━┳━┓
 ┃   ━━┫  ┃  ┃  ┏━━┫  ╻  ┣━┓ ┃ ╹ ┃
 ┣━━   ┃     ┃  ╹  ┃  ╹  ┣━┛ ┗━┓ ┃
 ┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┻━┛</a></p>
+                    <p class="pre"><a href="javascript:toggleTheme()">
+(v)
+ ≡ </a></p>
+                </div>
                 <p class="hor-bar center">
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                 </p>
@@ -78,7 +87,9 @@
     <script type="module" src="/scripts/asciiFont.js"></script>
     <script type="module" src="/scripts/gridString.js"></script>
     <script type="module" src="/scripts/script.js"></script>
+    <script type="module" src="/scripts/counter.js"></script>
+    <script type="module" src="/scripts/themes.js"></script>
     <script data-goatcounter="https://sugo14.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+        async src="/scripts/count.js"></script>
 </body>
 </html>
