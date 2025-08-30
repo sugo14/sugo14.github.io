@@ -379,6 +379,7 @@ em {
 
 #this-project-is-open-source {
     margin-top: var(--line-height);
+    margin-bottom: var(--line-height);
 }
 @media (max-width: 657px) {
     #make-your-own-site {
@@ -386,9 +387,6 @@ em {
     }
     #footer-ascii {
         display: none;
-    }
-    #this-project-is-open-source {
-        margin-bottom: var(--line-height);
     }
 }
 
@@ -420,13 +418,19 @@ em {
 #view-count {
     margin-top: var(--line-height);
 }
+#theme-toggle {
+    margin-top: var(--line-height);
+}
 
-iframe {
-    display: block !important;
-    visibility: visible !important;
-    position: static !important;
-    width: 200px !important;
-    height: 60px !important;
-    border: 2px solid red !important;
-    background: yellow !important;
+
+@media (max-width: 540px) {
+    #view-count {
+        display: none;
+    }
+    #theme-toggle {
+        display: none;
+    }
+    #banner {
+        display: block;
+    }
 }

@@ -11,9 +11,9 @@
 // }, 100);
 var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-    document.querySelector('#view-count-value').innerText = JSON.parse(this.responseText).count_unique
+    document.querySelector('#view-count-value').innerText = JSON.parse(this.responseText).count
 })
-r.open('GET', 'https://sugo14.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+r.open('GET', 'https://sugo14.goatcounter.com/counter/' + '.json')
 r.send()
 // var t = setInterval(function() {
 //     if (window.goatcounter && window.goatcounter.visit_count) {
