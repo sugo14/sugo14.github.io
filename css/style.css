@@ -36,27 +36,30 @@
     --primary-color: #ffff22;
     --secondary-color: #fc8e4a;
 
-    /* --terminal-back: #081a22;
-    --terminal-text: #f0cd91;
-    --primary-color: #ff8833;
-    --secondary-color: #349aa3;
-    --tertiary-color: #f0cd91; */
-
-    /* --terminal-back: #06041a;
-    --terminal-text: #a0a6f2;
-    --primary-color: #e1aa3e;
-    --secondary-color: #a6d01e;
-    --tertiary-color: #9ea6ec; */
-
-    /* --terminal-back: #07070a;
-    --terminal-text: #dddddd;
-    --tertiary-color: #dddddd;
-    --primary-color: #00ffff;
-    --secondary-color: #ff44cc; */
-
     --machine-text: #37e037;
     --dir-text: #4c8bff;
     --line-height: 21.5px;
+}
+[theme="1"] {
+    --terminal-back: #081a22;
+    --terminal-text: #f0cd91;
+    --primary-color: #ff8833;
+    --secondary-color: #349aa3;
+    --tertiary-color: #f0cd91;
+}
+[theme="2"] {
+    --terminal-back: #06041a;
+    --terminal-text: #a0a6f2;
+    --primary-color: #e1aa3e;
+    --secondary-color: #a6d01e;
+    --tertiary-color: #9ea6ec;
+}
+[theme="3"] {
+    --terminal-back: #FAFAFA;
+    --terminal-text: #383a42;
+    --tertiary-color: #383a42;
+    --primary-color: #4078f2;
+    --secondary-color: #50a14f;
 }
 
 html {
