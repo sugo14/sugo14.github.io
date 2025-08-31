@@ -41,6 +41,19 @@ module.exports = function(eleventyConfig) {
             }
             return data.permalink;
         },
+        viewcnt: async (data) => {
+            /*
+            var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+    document.querySelector('#view-count-value').innerText = JSON.parse(this.responseText).count
+})
+r.open('GET', 'https://sugo14.goatcounter.com/counter/' + '.json')
+r.send()
+            */
+            const res = await fetch('https://sugo14.goatcounter.com/counter/' + '.json');
+            const body = await res.json();
+            return body.count;
+        }
     });
 
     eleventyConfig.setLibrary("md", md);
