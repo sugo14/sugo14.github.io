@@ -384,7 +384,7 @@ em {
     margin-top: var(--line-height);
     margin-bottom: var(--line-height);
 }
-@media (max-width: 657px) {
+@media (max-width: 800px) {
     #make-your-own-site {
         display: none;
     }
