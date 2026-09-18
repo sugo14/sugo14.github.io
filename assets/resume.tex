@@ -1,0 +1,238 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Ayman Gani} \\ \vspace{1pt}
+    \small 587-599-8679 $|$ \href{mailto:aymangani3@gmail.com}{\underline{aymangani3@gmail.com}} $|$
+    \href{https://agani.me}{\underline{agani.me}} $|$ 
+    \href{https://linkedin.com/in/aymangani}{\underline{linkedin.com/in/aymangani}} $|$
+    \href{https://github.com/sugo14}{\underline{github.com/sugo14}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Waterloo, ON}
+      {Bachelor of Software Engineering}{Sep. 2026 -- Apr. 2031}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Firmware Team Member}{Sep. 2026 -- Current}
+      {UW Orbital}{Waterloo, ON}
+      \resumeItemListStart
+        \resumeItem{Completed onboarding designing mock temperature sensor driver and RTOS thermal management task}
+        \resumeItem{Currently debugging non-deterministic unit test failures in CI/CD as first issue}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Technology Lead}{Feb. 2026 -- June 2026}
+      {Reo, a Junior Achievement Company}{Edmonton, AB}
+      \resumeItemListStart
+        \resumeItem{Managed end-to-end tech infrastructure for a youth-led climate advocacy business}
+        \resumeItem{Coded a custom interactive storefront on Shopify using HTML/CSS/JS, Liquid, and Anime.js}
+        \resumeItem{Drove 1,000+ sessions and fulfilled \$800+ in orders while cutting termwise tech costs by 70\% (\$50 to \$15)}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Compiler Design and Optimization Lab Intern}{July 2025 -- Aug. 2025}
+      {University of Alberta}{Edmonton, AB}
+      \resumeItemListStart
+        \resumeItem{Audited computer architecture course materials, testing RISC-V Assembly labs such as CPU pipelining simulators}
+        \resumeItem{Implemented assignment compiler passes targeting LLVM Intermediate Representation (IR)}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Rated Contest Creator, Problem Setter}{Feb. 2025 -- Apr. 2025}
+      {DM:OJ Modern Online Judge}{Edmonton, AB}
+      \resumeItemListStart
+        \resumeItem{Created the Dr. Anne Anderson Coding Contest on Canada’s top competitive programming site (185,000+ users)}
+        \resumeItem{Authored 6 problems with 15+ test cases each, passing strict quality review to achieve rated status}
+        \resumeItem{Managed 13 in-person and 300+ worldwide participants across 4,000+ code submissions}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Tutoring Club Automator} $|$ \emph{Python, SciPy, Google Sheets}}{Sep. 2025 -- June 2026}
+          \resumeItemListStart
+            \resumeItem{Built an automated tutor-tutee matching engine for a school tutoring club using linear sum assignment}
+            \resumeItem{Reduced matching turnaround from 4+ days to under 2 hours, minimizing tedious spreadsheet sorting}
+            \resumeItem{Deployed matching framework to another local tutoring organization, EduSpark, pairing 200+ total members}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{2026 CSDCMS CanSat Competition} $|$ \emph{Python, Raspberry Pi, PyTorch, Jupyter}}{Sep. 2025 -- Apr. 2026}
+          \resumeItemListStart
+            \resumeItem{Wrote onboard Python software for a can-sized sensor payload (temp/pressure/GPS/images) launched into the air}
+            \resumeItem{Collected telemetry using I2C, UART and SPI, and ran a Monocular Height Estimation AI model onboard}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Terminal Velocity} $|$ \emph{C++, Make, Docker, GitHub}}{June 2025 -- Aug. 2025}
+          \resumeItemListStart
+            \resumeItem{Engineered a 3D software rasterizer and space shooter from scratch, running at 15 FPS within a terminal emulator}
+            \resumeItem{Processed 100+ game objects and 1,000+ triangle 3D model files with \textless5ms logic and rendering time per tick}
+            \resumeItem{Architected custom input, audio, and frame-rendering pipelines designed for terminal emulator constraints}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C++, Python, C, JavaScript, HTML/CSS, C\#, RISC-V Assembly, Java} \\
+     \textbf{Tools \& Frameworks}{: Linux/Bash, Git, Make, Node.js, Unity, Docker, LLVM, LaTeX } \\
+     \textbf{Hardware \& Protocols}{: I2C, SPI, UART, Raspberry Pi, PCB Layout (KiCad)}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+
+%
+%-------------------AWARDS------------------
+
+\section{Honors \& Awards}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Math, Sciences, and Technologies Award} $|$ \emph{Edmonton Public School Board}}{June 2026}
+    \resumeProjectHeading
+      {\textbf{Exceptional STEM Outreach Award} $|$ \emph{CSDCMS CanSat Competition}}{Apr. 2026}
+    \resumeProjectHeading
+      {\textbf{3rd Place} $|$ \emph{University of Alberta Programming Contest}}{Mar. 2025}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
